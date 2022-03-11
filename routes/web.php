@@ -5,6 +5,7 @@ use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -47,6 +48,11 @@ Route::post('/login',[SessionsController::class, 'store'])
 Route::get('/logout',[SessionsController::class, 'destroy'])
 ->name('login.destroy');
 
+Route::get('/edit',[RegisterController::class, 'create'])
+->name('edit.index'); 
+
+Route::post('cliente/',[ClienteController::class, 'create'])
+->name('cliente/'); 
 
 
 

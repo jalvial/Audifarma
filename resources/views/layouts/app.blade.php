@@ -1,15 +1,15 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="site.css">
     <title>@yield('title') - Laravel App </title>
     
-    <!-- Tailwind CSS Link -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Fontawesome Link -->
+   
     <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
  
   </head>
@@ -17,7 +17,7 @@
   <nav class="flex py-5 bg-indigo-500 text-white">
      <div class="w-1/2 px-12 mr-auto ">
          
-         <p class="text-5xl font-bold">Audifarma</p>
+         <p class="text-5xl font-bold" >Audifarma</p>
      </div>
 
         <ul class="w-1/2 px-16 ml-auto flex justify-end pt-1">
@@ -28,7 +28,12 @@
              <li>
                 <a href="{{ route('login.destroy')}}" class="font-bold
                  py-2 px-4 rounded-md hover:bg-white
-                hover:text-indigo-700"> Cerrar Secion </a>
+                hover:text-indigo-700"> Cerrar Sesion </a>
+            </li>
+            <li>
+                <a href="{{ route('cliente/')}}" class="font-bold
+                 py-2 px-4 rounded-md hover:bg-white
+                hover:text-indigo-700"> Agregar Cliente </a>
             </li>
           @else
           <li class="mx-6">
@@ -46,5 +51,6 @@
 
      </nav>
     @yield('content')
+    
   </body>
 </html>
